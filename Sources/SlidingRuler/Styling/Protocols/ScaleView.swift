@@ -45,7 +45,7 @@ public protocol ScaleView: FractionableView, Equatable {
     var fractionMarkOffset: CGFloat { get }
 }
 
-extension ScaleView {
+public extension ScaleView {
     var body: some View {
         shape
             .frame(size: .init(width: width, height: height))

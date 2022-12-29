@@ -34,7 +34,7 @@ public protocol FractionableView: View {
     static var hasHalf: Bool { get }
 }
 
-extension FractionableView {
+public extension FractionableView {
     static var fractions: Int { 10 }
     static var hasHalf: Bool { fractions.isEven }
 }

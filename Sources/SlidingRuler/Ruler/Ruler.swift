@@ -47,14 +47,15 @@ struct Ruler: View, Equatable {
         .animation(nil)
     }
     
-    private func configuration(forCell cell: RulerCell) -> SlidingRulerStyleConfiguation {
+    private func configuration(forCell cell: RulerCell) -> SlidingRulerStyleConfiguration {
         return .init(mark: (cell.mark + markOffset) * step, bounds: bounds, step: step, formatter: formatter)
     }
     
     static func ==(lhs: Self, rhs: Self) -> Bool {
         lhs.step == rhs.step &&
         lhs.cells.count == rhs.cells.count &&
-        (!StaticSlidingRulerStyleEnvironment.hasMarks || lhs.markOffset == rhs.markOffset)
+//        (!StaticSlidingRulerStyleEnvironment.hasMarks || lhs.markOffset == rhs.markOffset)
+        lhs.markOffset == rhs.markOffset
     }
 }
 

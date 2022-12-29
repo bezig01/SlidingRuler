@@ -29,7 +29,7 @@
 
 import CoreGraphics
 
-class RulerCell: Identifiable {
+struct RulerCell: Identifiable {
     var id: CGFloat { mark }
     var mark: CGFloat
 
